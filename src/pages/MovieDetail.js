@@ -7,7 +7,7 @@ export const MovieDetail = () => {
   const params = useParams();
   const [eachMovie, setEachMovie] = useState({});
   const eachMovieImage = `https://image.tmdb.org/t/p/w500/${eachMovie.poster_path}`;
-  const EachUrl = `https://api.themoviedb.org/3/movie/${params.id}?api_key=185ef4d89f2420dbfc6f12b6f4042125&include_adult=false&language=en-US`;
+  const EachUrl = `https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.REACT_APP_API_KEY}&include_adult=false&language=en-US`;
 
   useEffect(() => {
     async function fetchEachMovie(){
